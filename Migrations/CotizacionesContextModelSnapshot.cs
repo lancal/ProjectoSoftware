@@ -51,9 +51,13 @@ namespace Cotizaciones.Migrations
 
                     b.Property<string>("Paterno");
 
-                    b.Property<string>("Rut");
+                    b.Property<string>("Rut")
+                        .IsRequired();
 
                     b.HasKey("PersonaId");
+
+                    b.HasAlternateKey("Rut")
+                        .HasName("AlternateKey_Rut");
 
                     b.ToTable("Personas");
                 });

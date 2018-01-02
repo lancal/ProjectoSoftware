@@ -17,11 +17,12 @@ namespace Cotizaciones.Migrations
                     Materno = table.Column<string>(nullable: true),
                     Nombre = table.Column<string>(nullable: true),
                     Paterno = table.Column<string>(nullable: true),
-                    Rut = table.Column<string>(nullable: true)
+                    Rut = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Personas", x => x.PersonaId);
+                    table.UniqueConstraint("AlternateKey_Rut", x => x.Rut);
                 });
 
             migrationBuilder.CreateTable(

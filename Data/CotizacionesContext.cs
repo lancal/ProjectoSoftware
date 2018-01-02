@@ -27,6 +27,10 @@ namespace Cotizaciones.Data {
             .WithMany(c => c.Cotizaciones)
             .HasForeignKey(p => p.Rut)
             .HasConstraintName("ForeignKey_Cotizacion_Persona");
+
+            modelBuilder.Entity<Persona>()
+            .HasAlternateKey(p => p.Rut)
+            .HasName("AlternateKey_Rut");
         }
 
     }

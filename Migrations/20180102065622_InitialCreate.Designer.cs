@@ -10,7 +10,7 @@ using System;
 namespace Cotizaciones.Migrations
 {
     [DbContext(typeof(CotizacionesContext))]
-    [Migration("20180102054706_InitialCreate")]
+    [Migration("20180102065622_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -52,9 +52,13 @@ namespace Cotizaciones.Migrations
 
                     b.Property<string>("Paterno");
 
-                    b.Property<string>("Rut");
+                    b.Property<string>("Rut")
+                        .IsRequired();
 
                     b.HasKey("PersonaId");
+
+                    b.HasAlternateKey("Rut")
+                        .HasName("AlternateKey_Rut");
 
                     b.ToTable("Personas");
                 });
