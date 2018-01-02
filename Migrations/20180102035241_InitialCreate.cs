@@ -39,6 +39,20 @@ namespace Cotizaciones.Migrations
                 {
                     table.PrimaryKey("PK_Personas", x => x.Id);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "users",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Password = table.Column<string>(nullable: true),
+                    UserName = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_users", x => x.Id);
+                });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -48,6 +62,9 @@ namespace Cotizaciones.Migrations
 
             migrationBuilder.DropTable(
                 name: "Personas");
+
+            migrationBuilder.DropTable(
+                name: "users");
         }
     }
 }

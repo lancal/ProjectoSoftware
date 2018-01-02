@@ -10,7 +10,7 @@ using System;
 namespace Cotizaciones.Migrations
 {
     [DbContext(typeof(CotizacionesContext))]
-    [Migration("20180102032215_InitialCreate")]
+    [Migration("20180102035241_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -53,6 +53,20 @@ namespace Cotizaciones.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Personas");
+                });
+
+            modelBuilder.Entity("Cotizaciones.Models.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Password");
+
+                    b.Property<string>("UserName");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("users");
                 });
 #pragma warning restore 612, 618
         }

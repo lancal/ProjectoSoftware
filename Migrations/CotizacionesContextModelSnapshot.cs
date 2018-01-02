@@ -53,6 +53,20 @@ namespace Cotizaciones.Migrations
 
                     b.ToTable("Personas");
                 });
+
+            modelBuilder.Entity("Cotizaciones.Models.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Password");
+
+                    b.Property<string>("UserName");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("users");
+                });
 #pragma warning restore 612, 618
         }
     }
