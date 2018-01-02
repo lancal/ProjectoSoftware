@@ -13130,11 +13130,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\eskal\\OneDrive\\Documentos\\GitHub\\ProjectoSoftware\\Cotizaciones.csproj",
+      "projectUniqueName": "C:\\Users\\eskal\\OneDrive\\Documentos\\GitHub\\ProjectoSoftware\\Cotizaciones.csproj",
       "projectName": "Cotizaciones",
-      "projectPath": "c:\\Users\\eskal\\OneDrive\\Documentos\\GitHub\\ProjectoSoftware\\Cotizaciones.csproj",
+      "projectPath": "C:\\Users\\eskal\\OneDrive\\Documentos\\GitHub\\ProjectoSoftware\\Cotizaciones.csproj",
       "packagesPath": "C:\\Users\\eskal\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\eskal\\OneDrive\\Documentos\\GitHub\\ProjectoSoftware\\obj\\",
+      "outputPath": "C:\\Users\\eskal\\OneDrive\\Documentos\\GitHub\\ProjectoSoftware\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
