@@ -12,12 +12,9 @@ namespace Cotizaciones.Controllers
     {
         public IActionResult Index()
         {
-            return View();
-        }
+            //return View();
 
-        public IActionResult Login(){
-
-            return View();
+            return RedirectToAction("Login","User");
         }
 
         public IActionResult About()
