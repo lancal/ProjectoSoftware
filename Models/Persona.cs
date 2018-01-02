@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 /// <summary>
 /// Archivo donde se definen las clases del Dominio del problema.
 /// </summary>
@@ -12,7 +13,7 @@ namespace Cotizaciones.Models {
     /// </remarks>
     public class Persona
     {
-        public int Id { get; set; }
+        public int PersonaId { get; set; }
 
         public string Rut { get; set; }
 
@@ -21,6 +22,8 @@ namespace Cotizaciones.Models {
         public string Paterno { get; set; }
 
         public string Materno { get; set; }
+
+        public List<Cotizacion> Cotizaciones { get; set; }
 
     }
 }

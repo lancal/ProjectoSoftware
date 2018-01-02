@@ -22,7 +22,8 @@ namespace Cotizaciones.Controllers
         // GET: Cotizacion
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Cotizaciones.ToListAsync());
+            var cotizacionesContext = _context.Cotizaciones.Include(c => c.Persona);
+            return View(await cotizacionesContext.ToListAsync());
         }
 
         // GET: Cotizacion/Details/5
@@ -34,7 +35,8 @@ namespace Cotizaciones.Controllers
             }
 
             var cotizacion = await _context.Cotizaciones
-                .SingleOrDefaultAsync(m => m.Id == id);
+                .Include(c => c.Persona)
+                .SingleOrDefaultAsync(m => m.CotizacionId == id);
             if (cotizacion == null)
             {
                 return NotFound();
@@ -46,6 +48,7 @@ namespace Cotizaciones.Controllers
         // GET: Cotizacion/Create
         public IActionResult Create()
         {
+            ViewData["Rut"] = new SelectList(_context.Personas, "PersonaId", "PersonaId");
             return View();
         }
 
@@ -54,7 +57,7 @@ namespace Cotizaciones.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombre,Fecha,Servicios,Descripcion")] Cotizacion cotizacion)
+        public async Task<IActionResult> Create([Bind("CotizacionId,Nombre,Fecha,Servicios,Descripcion,Rut")] Cotizacion cotizacion)
         {
             if (ModelState.IsValid)
             {
@@ -62,6 +65,7 @@ namespace Cotizaciones.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["Rut"] = new SelectList(_context.Personas, "PersonaId", "PersonaId", cotizacion.Rut);
             return View(cotizacion);
         }
 
@@ -73,11 +77,12 @@ namespace Cotizaciones.Controllers
                 return NotFound();
             }
 
-            var cotizacion = await _context.Cotizaciones.SingleOrDefaultAsync(m => m.Id == id);
+            var cotizacion = await _context.Cotizaciones.SingleOrDefaultAsync(m => m.CotizacionId == id);
             if (cotizacion == null)
             {
                 return NotFound();
             }
+            ViewData["Rut"] = new SelectList(_context.Personas, "PersonaId", "PersonaId", cotizacion.Rut);
             return View(cotizacion);
         }
 
@@ -86,9 +91,9 @@ namespace Cotizaciones.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Fecha,Servicios,Descripcion")] Cotizacion cotizacion)
+        public async Task<IActionResult> Edit(int id, [Bind("CotizacionId,Nombre,Fecha,Servicios,Descripcion,Rut")] Cotizacion cotizacion)
         {
-            if (id != cotizacion.Id)
+            if (id != cotizacion.CotizacionId)
             {
                 return NotFound();
             }
@@ -102,7 +107,7 @@ namespace Cotizaciones.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CotizacionExists(cotizacion.Id))
+                    if (!CotizacionExists(cotizacion.CotizacionId))
                     {
                         return NotFound();
                     }
@@ -113,6 +118,7 @@ namespace Cotizaciones.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["Rut"] = new SelectList(_context.Personas, "PersonaId", "PersonaId", cotizacion.Rut);
             return View(cotizacion);
         }
 
@@ -125,7 +131,8 @@ namespace Cotizaciones.Controllers
             }
 
             var cotizacion = await _context.Cotizaciones
-                .SingleOrDefaultAsync(m => m.Id == id);
+                .Include(c => c.Persona)
+                .SingleOrDefaultAsync(m => m.CotizacionId == id);
             if (cotizacion == null)
             {
                 return NotFound();
@@ -139,7 +146,7 @@ namespace Cotizaciones.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var cotizacion = await _context.Cotizaciones.SingleOrDefaultAsync(m => m.Id == id);
+            var cotizacion = await _context.Cotizaciones.SingleOrDefaultAsync(m => m.CotizacionId == id);
             _context.Cotizaciones.Remove(cotizacion);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
@@ -147,7 +154,7 @@ namespace Cotizaciones.Controllers
 
         private bool CotizacionExists(int id)
         {
-            return _context.Cotizaciones.Any(e => e.Id == id);
+            return _context.Cotizaciones.Any(e => e.CotizacionId == id);
         }
     }
 }

@@ -20,5 +20,14 @@ namespace Cotizaciones.Data {
 
         public DbSet<User> users { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Cotizacion>()
+            .HasOne(p => p.Persona)
+            .WithMany(c => c.Cotizaciones)
+            .HasForeignKey(p => p.Rut)
+            .HasConstraintName("ForeignKey_Cotizacion_Persona");
+        }
+
     }
 }
