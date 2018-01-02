@@ -10,7 +10,7 @@ using System;
 namespace Cotizaciones.Migrations
 {
     [DbContext(typeof(CotizacionesContext))]
-    [Migration("20180102035241_InitialCreate")]
+    [Migration("20180102054706_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,7 +21,7 @@ namespace Cotizaciones.Migrations
 
             modelBuilder.Entity("Cotizaciones.Models.Cotizacion", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("CotizacionId")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Descripcion");
@@ -30,16 +30,20 @@ namespace Cotizaciones.Migrations
 
                     b.Property<string>("Nombre");
 
+                    b.Property<int>("Rut");
+
                     b.Property<string>("Servicios");
 
-                    b.HasKey("Id");
+                    b.HasKey("CotizacionId");
+
+                    b.HasIndex("Rut");
 
                     b.ToTable("Cotizaciones");
                 });
 
             modelBuilder.Entity("Cotizaciones.Models.Persona", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("PersonaId")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Materno");
@@ -50,7 +54,7 @@ namespace Cotizaciones.Migrations
 
                     b.Property<string>("Rut");
 
-                    b.HasKey("Id");
+                    b.HasKey("PersonaId");
 
                     b.ToTable("Personas");
                 });
@@ -67,6 +71,15 @@ namespace Cotizaciones.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("users");
+                });
+
+            modelBuilder.Entity("Cotizaciones.Models.Cotizacion", b =>
+                {
+                    b.HasOne("Cotizaciones.Models.Persona", "Persona")
+                        .WithMany("Cotizaciones")
+                        .HasForeignKey("Rut")
+                        .HasConstraintName("ForeignKey_Cotizacion_Persona")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

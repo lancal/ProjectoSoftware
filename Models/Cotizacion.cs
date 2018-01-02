@@ -12,7 +12,7 @@ namespace Cotizaciones.Models {
     /// </remarks>
     public class Cotizacion
     {
-        public int Id { get; set; }
+        public int CotizacionId { get; set; }
 
         public string Nombre { get; set; }
 
@@ -21,6 +21,9 @@ namespace Cotizaciones.Models {
         public string Servicios { get; set; }
 
         public string Descripcion { get; set; }
+
+        public int Rut { get; set; }
+        public Persona Persona { get; set; }
 
     }
 }
