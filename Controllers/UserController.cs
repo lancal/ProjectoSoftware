@@ -155,5 +155,10 @@ namespace Cotizaciones.Controllers
         {
             return _context.users.Any(e => e.Id == id);
         }
+
+        private bool UserNameExists(string username){
+
+            return _context.users.Any(e => e.UserName == username );
+        }
     }
 }
