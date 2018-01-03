@@ -2,6 +2,10 @@ using System.Collections.Generic;
 /// <summary>
 /// Archivo donde se definen las clases del Dominio del problema.
 /// </summary>
+
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
 namespace Cotizaciones.Models {
 
     /// <summary>
@@ -15,11 +19,19 @@ namespace Cotizaciones.Models {
     {
         public int PersonaId { get; set; }
 
+        [Required(ErrorMessage = "This is required.")]
+
         public string Rut { get; set; }
+
+        [Required(ErrorMessage = "This is required.")]
 
         public string Nombre { get; set; }
 
+        [Required(ErrorMessage = "This is required.")]
+
         public string Paterno { get; set; }
+
+        [Required(ErrorMessage = "This is required.")]
 
         public string Materno { get; set; }
 
