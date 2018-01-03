@@ -8,6 +8,12 @@ namespace Cotizaciones.Models{
 
         public string Password {get; set;}
 
+        //[DisplayName("Confirm Password")]
+
+        public string ConfirmPassword {get; set;}
+
+        public bool IsAdmin {get; set;}
+
     }
 
 

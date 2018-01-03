@@ -44,9 +44,16 @@ namespace Cotizaciones.Controllers
         }
 
         // GET: User/Create
+        //public IActionResult Create()
+        //{
+          //  return View();
+        //}
+
         public IActionResult Create()
         {
             return View();
+
+            //return RedirectToAction("Create","User");
         }
 
         public IActionResult Login(){
