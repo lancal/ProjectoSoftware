@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\eskal\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\eskal\\.nuget\\packages",
+      "C:\\Users\\RaosF\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\RaosF\\.nuget\\packages",
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ]
   }

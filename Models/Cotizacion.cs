@@ -1,6 +1,11 @@
 /// <summary>
 /// Archivo donde se definen las clases del Dominio del problema.
 /// </summary>
+
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
 namespace Cotizaciones.Models {
 
     /// <summary>
@@ -14,17 +19,30 @@ namespace Cotizaciones.Models {
     {
         public int CotizacionId { get; set; }
 
+        [Required(ErrorMessage = "This is required.")]
+
         public string Nombre { get; set; }
+
+        [Required(ErrorMessage = "This is required.")]
 
         public string Fecha { get; set; }
 
+        [Required(ErrorMessage = "This is required.")]
+
         public string Servicios { get; set; }
+
+        [Required(ErrorMessage = "This is required.")]
 
         public uint ValorCotizado { get; set; }
 
+        [Required(ErrorMessage = "This is required.")]
+
         public string Descripcion { get; set; }
 
+        [Required(ErrorMessage = "This is required.")]
+
         public int Rut { get; set; }
+        
         public Persona Persona { get; set; }
 
     }

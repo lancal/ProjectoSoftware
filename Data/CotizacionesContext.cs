@@ -31,6 +31,11 @@ namespace Cotizaciones.Data {
             modelBuilder.Entity<Persona>()
             .HasAlternateKey(p => p.Rut)
             .HasName("AlternateKey_Rut");
+
+            modelBuilder.Entity<User>()
+            .HasAlternateKey(u => u.UserName)
+            .HasName("AlternateKey_UserName");
+
         }
 
     }
