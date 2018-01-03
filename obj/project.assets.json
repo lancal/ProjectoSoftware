@@ -13130,11 +13130,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\RaosF\\ProjectoSoftware\\Cotizaciones.csproj",
+      "projectUniqueName": "C:\\Users\\RaosF\\ProjectoSoftware\\Cotizaciones.csproj",
       "projectName": "Cotizaciones",
-      "projectPath": "c:\\Users\\RaosF\\ProjectoSoftware\\Cotizaciones.csproj",
+      "projectPath": "C:\\Users\\RaosF\\ProjectoSoftware\\Cotizaciones.csproj",
       "packagesPath": "C:\\Users\\RaosF\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\RaosF\\ProjectoSoftware\\obj\\",
+      "outputPath": "C:\\Users\\RaosF\\ProjectoSoftware\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
