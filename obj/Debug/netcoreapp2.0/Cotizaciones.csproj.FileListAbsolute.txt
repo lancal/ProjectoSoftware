@@ -18,3 +18,13 @@ C:\Users\eskal\OneDrive\Documentos\GitHub\ProjectoSoftware\obj\Debug\netcoreapp2
 C:\Users\eskal\OneDrive\Documentos\GitHub\ProjectoSoftware\obj\Debug\netcoreapp2.0\Cotizaciones.AssemblyInfo.cs
 C:\Users\eskal\OneDrive\Documentos\GitHub\ProjectoSoftware\obj\Debug\netcoreapp2.0\Cotizaciones.dll
 C:\Users\eskal\OneDrive\Documentos\GitHub\ProjectoSoftware\obj\Debug\netcoreapp2.0\Cotizaciones.pdb
+C:\Users\RaosF\ProjectoSoftware\bin\Debug\netcoreapp2.0\Cotizaciones.deps.json
+C:\Users\RaosF\ProjectoSoftware\bin\Debug\netcoreapp2.0\Cotizaciones.runtimeconfig.json
+C:\Users\RaosF\ProjectoSoftware\bin\Debug\netcoreapp2.0\Cotizaciones.runtimeconfig.dev.json
+C:\Users\RaosF\ProjectoSoftware\bin\Debug\netcoreapp2.0\Cotizaciones.dll
+C:\Users\RaosF\ProjectoSoftware\bin\Debug\netcoreapp2.0\Cotizaciones.pdb
+C:\Users\RaosF\ProjectoSoftware\obj\Debug\netcoreapp2.0\Cotizaciones.csproj.CoreCompileInputs.cache
+C:\Users\RaosF\ProjectoSoftware\obj\Debug\netcoreapp2.0\Cotizaciones.AssemblyInfoInputs.cache
+C:\Users\RaosF\ProjectoSoftware\obj\Debug\netcoreapp2.0\Cotizaciones.AssemblyInfo.cs
+C:\Users\RaosF\ProjectoSoftware\obj\Debug\netcoreapp2.0\Cotizaciones.dll
+C:\Users\RaosF\ProjectoSoftware\obj\Debug\netcoreapp2.0\Cotizaciones.pdb
