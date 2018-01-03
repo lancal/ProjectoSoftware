@@ -43,16 +43,11 @@ namespace Cotizaciones.Controllers
             return View(user);
         }
 
-        public IActionResult Create(){
-
+        // GET: User/Create
+        public IActionResult Create()
+        {
             return View();
         }
-
-        // GET: User/Create        
-        public IActionResult Login(){
-
-            return View();
-        } 
 
         // POST: User/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 

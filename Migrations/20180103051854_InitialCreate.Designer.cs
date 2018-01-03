@@ -10,7 +10,7 @@ using System;
 namespace Cotizaciones.Migrations
 {
     [DbContext(typeof(CotizacionesContext))]
-    [Migration("20180103045604_InitialCreate")]
+    [Migration("20180103051854_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,6 +23,8 @@ namespace Cotizaciones.Migrations
                 {
                     b.Property<int>("CotizacionId")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Descripcion");
 
                     b.Property<string>("Fecha");
 
@@ -67,6 +69,10 @@ namespace Cotizaciones.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<string>("ConfirmPassword");
+
+                    b.Property<bool>("IsAdmin");
 
                     b.Property<string>("Password");
 

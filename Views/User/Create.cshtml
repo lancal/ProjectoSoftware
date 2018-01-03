@@ -6,10 +6,7 @@
 
 <h2>Create</h2>
 
-<p>
-    <a asp-action="Create">Create New User</a>
-</p>
-
+<h4>User</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -24,7 +21,7 @@
                 <label asp-for="Password" class="control-label"></label>
                 <input asp-for="Password" class="form-control" />
                 <span asp-validation-for="Password" class="text-danger"></span>
-            
+            </div>
             <div class="form-group">
                 <label asp-for="ConfirmPassword" class="control-label"></label>
                 <input asp-for="ConfirmPassword" class="form-control" />
@@ -35,10 +32,7 @@
                     <label>
                         <input asp-for="IsAdmin" /> @Html.DisplayNameFor(model => model.IsAdmin)
                     </label>
-                 </div>
-              </div>
-
-
+                </div>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />
