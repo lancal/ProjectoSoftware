@@ -10,7 +10,7 @@ using System;
 namespace Cotizaciones.Migrations
 {
     [DbContext(typeof(CotizacionesContext))]
-    [Migration("20180103051854_InitialCreate")]
+    [Migration("20180103175514_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -74,11 +74,16 @@ namespace Cotizaciones.Migrations
 
                     b.Property<bool>("IsAdmin");
 
-                    b.Property<string>("Password");
+                    b.Property<string>("Password")
+                        .IsRequired();
 
-                    b.Property<string>("UserName");
+                    b.Property<string>("UserName")
+                        .IsRequired();
 
                     b.HasKey("Id");
+
+                    b.HasAlternateKey("UserName")
+                        .HasName("AlternateKey_UserName");
 
                     b.ToTable("users");
                 });
