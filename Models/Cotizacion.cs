@@ -20,7 +20,7 @@ namespace Cotizaciones.Models {
 
         public string Servicios { get; set; }
 
-        public string Descripcion { get; set; }
+        public uint ValorCotizado { get; set; }
 
         public int Rut { get; set; }
         public Persona Persona { get; set; }

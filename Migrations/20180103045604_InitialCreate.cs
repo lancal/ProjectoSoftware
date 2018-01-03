@@ -45,11 +45,11 @@ namespace Cotizaciones.Migrations
                 {
                     CotizacionId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Descripcion = table.Column<string>(nullable: true),
                     Fecha = table.Column<string>(nullable: true),
                     Nombre = table.Column<string>(nullable: true),
                     Rut = table.Column<int>(nullable: false),
-                    Servicios = table.Column<string>(nullable: true)
+                    Servicios = table.Column<string>(nullable: true),
+                    ValorCotizado = table.Column<uint>(nullable: false)
                 },
                 constraints: table =>
                 {

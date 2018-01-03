@@ -10,7 +10,7 @@ using System;
 namespace Cotizaciones.Migrations
 {
     [DbContext(typeof(CotizacionesContext))]
-    [Migration("20180102065622_InitialCreate")]
+    [Migration("20180103045604_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,8 +24,6 @@ namespace Cotizaciones.Migrations
                     b.Property<int>("CotizacionId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Descripcion");
-
                     b.Property<string>("Fecha");
 
                     b.Property<string>("Nombre");
@@ -33,6 +31,8 @@ namespace Cotizaciones.Migrations
                     b.Property<int>("Rut");
 
                     b.Property<string>("Servicios");
+
+                    b.Property<uint>("ValorCotizado");
 
                     b.HasKey("CotizacionId");
 

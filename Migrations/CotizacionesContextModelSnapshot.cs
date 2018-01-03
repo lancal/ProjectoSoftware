@@ -23,8 +23,6 @@ namespace Cotizaciones.Migrations
                     b.Property<int>("CotizacionId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Descripcion");
-
                     b.Property<string>("Fecha");
 
                     b.Property<string>("Nombre");
@@ -32,6 +30,8 @@ namespace Cotizaciones.Migrations
                     b.Property<int>("Rut");
 
                     b.Property<string>("Servicios");
+
+                    b.Property<uint>("ValorCotizado");
 
                     b.HasKey("CotizacionId");
 
