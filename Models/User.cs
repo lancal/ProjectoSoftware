@@ -20,9 +20,9 @@ namespace Cotizaciones.Models{
 
         [DataType(DataType.Password)]
 
-        [Compare("Password")]
-
         [DisplayName("Confirm Password")]
+
+        [Compare("Password")]
 
         public string ConfirmPassword {get; set;}
 
