@@ -1,14 +1,27 @@
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
 namespace Cotizaciones.Models{
 
     public class User{
 
         public int Id {get;set;}
 
+        [Required(ErrorMessage = "This is required.")]
+
         public string UserName{get; set;}
+
+        [Required(ErrorMessage = "This is required.")] 
+
+        [DataType(DataType.Password)]
 
         public string Password {get; set;}
 
-        //[DisplayName("Confirm Password")]
+        [DataType(DataType.Password)]
+
+        [Compare("Password")]
+
+        [DisplayName("Confirm Password")]
 
         public string ConfirmPassword {get; set;}
 
