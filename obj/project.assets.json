@@ -13124,30 +13124,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\RaosF\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/alan/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\RaosF\\ProjectoSoftware\\Cotizaciones.csproj",
+      "projectUniqueName": "/Users/alan/Desktop/ProjectoSoftware/Cotizaciones.csproj",
       "projectName": "Cotizaciones",
-      "projectPath": "C:\\Users\\RaosF\\ProjectoSoftware\\Cotizaciones.csproj",
-      "packagesPath": "C:\\Users\\RaosF\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\RaosF\\ProjectoSoftware\\obj\\",
+      "projectPath": "/Users/alan/Desktop/ProjectoSoftware/Cotizaciones.csproj",
+      "packagesPath": "/Users/alan/.nuget/packages/",
+      "outputPath": "/Users/alan/Desktop/ProjectoSoftware/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\RaosF\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/alan/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -13166,7 +13164,7 @@
         "dependencies": {
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0",
+            "version": "2.0.0",
             "autoReferenced": true
           },
           "Microsoft.AspNetCore.All": {
