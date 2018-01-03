@@ -44,20 +44,8 @@ namespace Cotizaciones.Controllers
         }
 
         // GET: User/Create
-        //public IActionResult Create()
-        //{
-          //  return View();
-        //}
-
         public IActionResult Create()
         {
-            return View();
-
-            //return RedirectToAction("Create","User");
-        }
-
-        public IActionResult Login(){
-
             return View();
         }
 
@@ -66,7 +54,7 @@ namespace Cotizaciones.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,UserName,Password")] User user)
+        public async Task<IActionResult> Create([Bind("Id,UserName,Password,ConfirmPassword,IsAdmin")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -98,7 +86,7 @@ namespace Cotizaciones.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,UserName,Password")] User user)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,UserName,Password,ConfirmPassword,IsAdmin")] User user)
         {
             if (id != user.Id)
             {

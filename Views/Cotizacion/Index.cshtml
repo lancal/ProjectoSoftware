@@ -24,6 +24,9 @@
                 <th>
                     @Html.DisplayNameFor(model => model.ValorCotizado)
                 </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Descripcion)
+                </th>
             <th>
                 @Html.DisplayNameFor(model => model.Persona)
             </th>
@@ -44,6 +47,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ValorCotizado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Persona.Rut)

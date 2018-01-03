@@ -14,9 +14,9 @@ namespace Cotizaciones.Migrations
                 {
                     PersonaId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Materno = table.Column<string>(nullable: true),
-                    Nombre = table.Column<string>(nullable: true),
-                    Paterno = table.Column<string>(nullable: true),
+                    Materno = table.Column<string>(nullable: false),
+                    Nombre = table.Column<string>(nullable: false),
+                    Paterno = table.Column<string>(nullable: false),
                     Rut = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
@@ -31,6 +31,8 @@ namespace Cotizaciones.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                    ConfirmPassword = table.Column<string>(nullable: true),
+                    IsAdmin = table.Column<bool>(nullable: false),
                     Password = table.Column<string>(nullable: true),
                     UserName = table.Column<string>(nullable: true)
                 },
@@ -45,10 +47,11 @@ namespace Cotizaciones.Migrations
                 {
                     CotizacionId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Fecha = table.Column<string>(nullable: true),
-                    Nombre = table.Column<string>(nullable: true),
+                    Descripcion = table.Column<string>(nullable: false),
+                    Fecha = table.Column<string>(nullable: false),
+                    Nombre = table.Column<string>(nullable: false),
                     Rut = table.Column<int>(nullable: false),
-                    Servicios = table.Column<string>(nullable: true),
+                    Servicios = table.Column<string>(nullable: false),
                     ValorCotizado = table.Column<uint>(nullable: false)
                 },
                 constraints: table =>

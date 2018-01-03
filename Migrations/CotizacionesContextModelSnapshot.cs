@@ -23,6 +23,8 @@ namespace Cotizaciones.Migrations
                     b.Property<int>("CotizacionId")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("Descripcion");
+
                     b.Property<string>("Fecha");
 
                     b.Property<string>("Nombre");
@@ -66,6 +68,10 @@ namespace Cotizaciones.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<string>("ConfirmPassword");
+
+                    b.Property<bool>("IsAdmin");
 
                     b.Property<string>("Password");
 
